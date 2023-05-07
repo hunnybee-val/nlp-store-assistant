@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico">
   <title>Цветочный рай - Ассистент</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page_body">
   <header class="page_header">
-    <a href="#"><img class="header_logo" src="img/logo.svg" width="62" height="62" alt="Логотип Цветочный Рай "> </a>
     <nav class="header_nav">
+      <a href="#"><img class="header_logo" src="img/logo.svg" width="62" height="62" alt="Логотип Цветочный Рай "> </a>
       <ul class="header_nav__categories">
         <li class="header_nav__categories__item">
           <a href="#" class="header_nav__link">Главная</a>
@@ -37,26 +38,31 @@
 
   <main class="index_main">
     <section class="index_main_assistant">
-      <h1 class="visually-hidden">Виртуальный ассистент магазина "Цветочный рай"</h1>
-      <h2 class="assistant_introduction__header">Добрый день!<br>Я - ваш ассистент!</h2>
-      <h3 class="assistant_introduction__subheader">Давайте вместе подберем для вас то, что нужно.</h3>
-      <p class="assistant_introduction__description">В свободной форме расскажите мне о своих пожеланиях, для кого вы выбираете товар, что вам нравится или что вы точно не любите -
-        а я подберу вам подходящие товары!</p>
-      <form class="assistant__user-query" action="https://postman-echo.com/get" method="get">
-        <label class="visually-hidden" for="assistant__user-query">Напишите о своих пожеланиях</label>
-        <input type="text" name="assistant__user-query" id="assistant__user-query" placeholder="Введите свой запрос...">
-        <input type="submit" value="Поехали!">
-      </form>
+      <div class="index_main_assistant__container">
+        <h1 class="visually-hidden">Виртуальный ассистент магазина "Цветочный рай"</h1>
+        <div class="assistant_introduction">
+          <h2 class="assistant_introduction__header">Добрый день!<br>Я - ваш ассистент!</h2>
+          <h3 class="assistant_introduction__subheader">Давайте вместе подберем для вас то, что нужно.</h3>
+          <p class="assistant_introduction__description">В свободной форме расскажите мне о своих пожеланиях, для кого вы выбираете товар, что вам нравится или что вы точно не любите -
+            а я подберу вам подходящие товары!</p>
+        </div>
+        <form class="assistant__user-query" action="https://postman-echo.com/get" method="get">
+          <label class="visually-hidden" for="assistant__user-query_field">Напишите о своих пожеланиях</label>
+          <input type="text" class="assistant__user-query_field" name="assistant__user-query" id="assistant__user-query_field" placeholder="Введите свой запрос...">
+          <input type="submit" class="assistant__user-query_button" value="Поехали!">
+        </form>
+      </div>
     </section>
   </main>
 
 
   <footer class="page_footer">
-    <span class="page_footer__copyright">&#169;Юнг П.В., Стрыгина В.М., создание программного обеспечения и оформление веб-сайта, 2023 год
+    <a class="footer__link" href="https://github.com/hunnybee-val/nlp-store-assistant">Ссылка на репозиторий GitHub</a>
+    <span class="footer__copyright">&#169;Юнг П.В., Стрыгина В.М., 2023 год <br>Cоздание программного обеспечения и оформление веб-сайта
     <br>Создано в рамках проекта "Цифровые кафедры"</span><br>
-    <a href="https://github.com/hunnybee-val/nlp-store-assistant">Ссылка на репозиторий GitHub</a>
+
     <br>
-    <span class="page_footer__tg-links">Написать нам: <a href="https://t.me/belaboris">тут</a>, и <a href="https://t.me/Polina_Y1">тут</a></span>
+    <span >Написать нам: <a class="footer__link" href="https://t.me/belaboris">тут</a>, и <a class="footer__link" href="https://t.me/Polina_Y1">тут</a></span>
   </footer>
 </body>
 </html>
