@@ -88,6 +88,7 @@ body {
 .index_main{
     margin-left: 100px;
     margin-right: 100px;
+    margin-bottom: 80px;
 }
 
 .index_main_assistant__container{
@@ -107,7 +108,7 @@ body {
     left: -16px;
     top: -20px;
     width: 495px;
-    height: 610px;
+    height: 690px;
 }
 
 .assistant_introduction{
