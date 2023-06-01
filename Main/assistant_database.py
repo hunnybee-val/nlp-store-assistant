@@ -24,9 +24,9 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS product (
 );''')
 
 cursor.execute('''CREATE TABLE IF NOT EXISTS assistant_data (
-    msg_id SERIAL NOT NULL,
-    product_id INTEGER NOT NULL REFERENCES  product(id),
-    category_id INTEGER NOT NULL REFERENCES  category(id),
+    msg_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    product_id INTEGER NOT NULL,
+    category_id INTEGER NOT NULL,
     message VARCHAR(255) NOT NULL
 );''')
 
