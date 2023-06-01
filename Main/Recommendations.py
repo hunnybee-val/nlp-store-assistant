@@ -2,6 +2,7 @@ import pymorphy2
 import sqlite3
 from nltk.corpus import stopwords
 
+
 def preprocess(text):
     morph = pymorphy2.MorphAnalyzer()
 
@@ -13,6 +14,7 @@ def preprocess(text):
     # Лемматизация слов в запросе
     lemmas = [morph.parse(token)[0].normal_form for token in tokens_without_stop_words]
     return lemmas
+
 
 def product_recommend(tokens):
     cursor.execute("SELECT id FROM product")
@@ -142,6 +144,7 @@ def product_recommend(tokens):
     else:
         recommend(tokens)
 
+
 def recommend(tokens):
     cursor.execute("SELECT id FROM category")
     categories = cursor.fetchall()
@@ -156,26 +159,27 @@ def recommend(tokens):
         c = categories[0]
         cursor.execute("SELECT name, description from product WHERE category=?", (c))
         recommendation = cursor.fetchall()
-        return(recommendation)
+        return recommendation
     elif any(key_word in tokens for key_word in key_words2):
         c = categories[1]
         cursor.execute("SELECT name, description from product WHERE category=?", (c))
         recommendation = cursor.fetchall()
-        return (recommendation)
+        return recommendation
     elif any(key_word in tokens for key_word in key_words3):
         c = categories[2]
         cursor.execute("SELECT name, description from product WHERE category=?", (c))
         recommendation = cursor.fetchall()
-        return (recommendation)
+        return recommendation
     elif any(key_word in tokens for key_word in key_words4):
         c = categories[3]
         cursor.execute("SELECT name, description from product WHERE category=?", (c))
         recommendation = cursor.fetchall()
-        return (recommendation)
+        return recommendation
     elif any(key_word in tokens for key_word in key_words5):
         cursor.execute("SELECT name, description from product WHERE price<=1500")
         recommendation = cursor.fetchall()
-        return (recommendation)
+        return recommendation
+
 
 conn = sqlite3.connect('AssistantDB.db')
 cursor = conn.cursor()
