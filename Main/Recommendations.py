@@ -43,7 +43,7 @@ def product_recommend(tokens, id, cat_id, cursor):
 
     if any(key_word in tokens for key_word in key_words1):
         c = products[0]
-        cursor.execute("SELECT name, description, price from product WHERE id=?", c)
+        cursor.execute("SELECT name, description, price, link from product WHERE id=?", c)
         recommendation = cursor.fetchall()
         cursor.execute("SELECT id from product WHERE id=?", c)
         id = cursor.fetchall()

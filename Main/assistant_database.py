@@ -37,7 +37,7 @@ cursor.execute("INSERT INTO category (id, name) VALUES (3, 'Трендовые')
 cursor.execute("INSERT INTO category (id, name) VALUES (4, 'Экзотика')")
 
 cursor.execute("INSERT INTO product (id, name, description, price, link, category) VALUES (1, 'Розы «Красная Луна»', "
-               "'Красивые крупные цветы с насыщенным красным цветом.', 2500, null, 1)")
+               "'Красивые крупные цветы с насыщенным красным цветом.', 2500, 'https://disk.yandex.ru/i/Dt4GMy9SdejiOA', 1)")
 cursor.execute("INSERT INTO product (id, name, description, price, link, category) VALUES (2, 'Тюльпаны «Радуга»', "
                "'Яркие и насыщенные цвета, подходят для подарка на любой праздник.', 3000, null, 1)")
 cursor.execute("INSERT INTO product (id, name, description, price, link, category) VALUES (3, 'Лилии «Белый снег»', "
