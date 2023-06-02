@@ -292,9 +292,9 @@ def result_recommendation(msg):
     category_id = ['']
     product_id = ['']
 
-    recommendation, product_id, category_id, price = product_recommend(tokens, product_id, category_id, cursor)
+    recommendation, product_id, category_id= product_recommend(tokens, product_id, category_id, cursor)
     if recommendation == tokens:
-        recommendation, product_id, category_id, price = category_recommend(tokens, product_id, category_id, cursor)
+        recommendation, product_id, category_id = category_recommend(tokens, product_id, category_id, cursor)
 
     category_id = ''.join(str(x) for x in category_id)
     product_id = ''.join(str(x) for x in product_id)
