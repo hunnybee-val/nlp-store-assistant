@@ -51,7 +51,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words2):
         c = products[1]
@@ -62,7 +62,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words3):
         c = products[2]
@@ -73,7 +73,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words4):
         c = products[3]
@@ -84,7 +84,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words5):
         c = products[4]
@@ -95,7 +95,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words6):
         c = products[5]
@@ -106,7 +106,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words7):
         c = products[6]
@@ -117,7 +117,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words8):
         c = products[7]
@@ -128,7 +128,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words9):
         c = products[8]
@@ -139,7 +139,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words10):
         c = products[9]
@@ -150,7 +150,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words11):
         c = products[10]
@@ -161,7 +161,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words12):
         c = products[11]
@@ -172,7 +172,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words13):
         c = products[12]
@@ -183,7 +183,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words14):
         c = products[13]
@@ -194,7 +194,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words15):
         c = products[14]
@@ -205,7 +205,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words16):
         c = products[15]
@@ -216,7 +216,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words17):
         c = products[16]
@@ -227,7 +227,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words18):
         c = products[17]
@@ -238,7 +238,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words19):
         c = products[18]
@@ -249,7 +249,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words20):
         c = products[19]
@@ -260,7 +260,7 @@ def product_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE id=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE id=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     else:
         return tokens, id, cat_id, price
@@ -287,7 +287,7 @@ def category_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE category=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE category=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words2):
         c = categories[1]
@@ -298,7 +298,7 @@ def category_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE category=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE category=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words3):
         c = categories[2]
@@ -309,7 +309,7 @@ def category_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE category=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE category=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words4):
         c = categories[3]
@@ -320,7 +320,7 @@ def category_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE category=?", c)
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE category=?", c)
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     elif any(key_word in tokens for key_word in key_words5):
         cursor.execute("SELECT name, description from product WHERE price<=1500")
@@ -330,7 +330,7 @@ def category_recommend(tokens, id, cat_id, cursor):
         cursor.execute("SELECT category from product WHERE price<=1500")
         cat_id = cursor.fetchall()
         cursor.execute("SELECT price from product WHERE price<=1500")
-        price = cursor.fetchhall()
+        price = cursor.fetchall()
         return recommendation, id, cat_id, price
     else:
         return tokens, id, cat_id, price
