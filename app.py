@@ -23,7 +23,8 @@ def data():
     if request.method == 'POST':
         user_msg = request.form['assistant__user-query']
         request_result = re.result_recommendation(user_msg)
-        file = os.path.join(img, '1.jpg')
+        img_url = request_result[0][3]
+        file = os.path.join(img, img_url)
         request_result_title = {
             'title' : f'{request_result[0][0]}'}
         request_result_description = {
