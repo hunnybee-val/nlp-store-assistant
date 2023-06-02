@@ -100,10 +100,18 @@ body {
     position: relative;
 }
 
+.index_main_assistant__container__data{
+    padding: 64px 80px;
+    background: rgb(255,255,255);
+    background: linear-gradient(-25deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.72) 100%);
+    border-radius: 44px;
+    position: relative;
+}
+
 .index_main_assistant__container::before{
     position: absolute;
     content: "";
-    background: url("../assistant.png");
+    background: url("/static/assistant.png");
     background-repeat: no-repeat;
     left: -16px;
     top: -20px;

@@ -2,7 +2,7 @@ import pymorphy2
 import sqlite3
 from nltk.corpus import stopwords
 
-def preprocess(text):
+def preprocess(text, ):
     morph = pymorphy2.MorphAnalyzer()
 
     # Токенизация запроса и удаление стоп-слов
@@ -15,7 +15,7 @@ def preprocess(text):
     return lemmas
 
 
-def product_recommend(tokens, id, cat_id):
+def product_recommend(tokens, id, cat_id, cursor):
     cursor.execute("SELECT id FROM product")
     products = cursor.fetchall()
 
@@ -225,7 +225,7 @@ def product_recommend(tokens, id, cat_id):
         return tokens, id, cat_id
 
 
-def category_recommend(tokens, id, cat_id):
+def category_recommend(tokens, id, cat_id, cursor):
     cursor.execute("SELECT id FROM category")
     categories = cursor.fetchall()
 
@@ -283,33 +283,33 @@ def category_recommend(tokens, id, cat_id):
         return tokens, id, cat_id
 
 
+def result_recommendation(msg):
+    conn = sqlite3.connect('/Users/mineralkina/PycharmProjects/nlp-store-assistant/Main/AssistantDB.db')
+    cursor = conn.cursor()
 
-conn = sqlite3.connect('AssistantDB.db')
-cursor = conn.cursor()
+    tokens = preprocess(msg)
 
-msg = "Розы"
-tokens = preprocess(msg)
+    category_id = ['']
+    product_id = ['']
 
-category_id = ['']
-product_id = ['']
+    recommendation, product_id, category_id = product_recommend(tokens, product_id, category_id, cursor)
+    if recommendation == tokens:
+        recommendation, product_id, category_id = category_recommend(tokens, product_id, category_id, cursor)
 
-recommendation, product_id, category_id = product_recommend(tokens, product_id, category_id)
-if recommendation == tokens:
-    recommendation, product_id, category_id = category_recommend(tokens, product_id, category_id)
+    category_id = ''.join(str(x) for x in category_id)
+    product_id = ''.join(str(x) for x in product_id)
 
-category_id = ''.join(str(x) for x in category_id)
-product_id = ''.join(str(x) for x in product_id)
-
-data = [product_id, category_id, msg]
+    data = [product_id, category_id, msg]
 
 
-# Передача сообщения и данных в БД
-if recommendation != tokens:
-    print('Предлагаемые товары', recommendation)
-    cursor.execute("INSERT INTO assistant_data (product_id, category_id, message) VALUES (?, ?, ?)", data)
-    conn.commit()
-else:
-    print("Для вас не нашлось товара по указанному запросу :(")
+    # Передача сообщения и данных в БД
+    if recommendation != tokens:
+        print('Предлагаемые товары', recommendation)
+        cursor.execute("INSERT INTO assistant_data (product_id, category_id, message) VALUES (?, ?, ?)", data)
+        conn.commit()
+        return str(recommendation)
+    else:
+        print("Для вас не нашлось товара по указанному запросу :(")
+        return "Для вас не нашлось товара по указанному запросу :("
 
-conn.close()
-
+    conn.close()
