@@ -2,14 +2,14 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico">
+  <link rel="shortcut icon" type="image/jpg" href="../static/favicon.ico">
   <title>Цветочный рай - Ассистент</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body class="page_body">
   <header class="page_header">
     <nav class="header_nav">
-      <a href="#"><img class="header_logo" src="img/logo.svg" width="62" height="62" alt="Логотип Цветочный Рай "> </a>
+      <a href="#"><img class="header_logo" src="../static/logo.svg" width="62" height="62" alt="Логотип Цветочный Рай "> </a>
       <ul class="header_nav__categories">
         <li class="header_nav__categories__item">
           <a href="#" class="header_nav__link">Главная</a>
@@ -46,7 +46,7 @@
           <p class="assistant_introduction__description">В свободной форме расскажите мне о своих пожеланиях, для кого вы выбираете товар, что вам нравится или что вы точно не любите -
             а я подберу вам подходящие товары!</p>
         </div>
-        <form class="assistant__user-query" action="https://postman-echo.com/get" method="get">
+        <form class="assistant__user-query" action="/data" method="POST">
           <label class="visually-hidden" for="assistant__user-query_field">Напишите о своих пожеланиях</label>
           <input type="text" class="assistant__user-query_field" name="assistant__user-query" id="assistant__user-query_field" placeholder="Введите свой запрос...">
           <input type="submit" class="assistant__user-query_button" value="Поехали!">

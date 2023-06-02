@@ -103,7 +103,7 @@ body {
 .index_main_assistant__container::before{
     position: absolute;
     content: "";
-    background: url("../img/assistant.png");
+    background: url("../assistant.png");
     background-repeat: no-repeat;
     left: -16px;
     top: -20px;
@@ -140,6 +140,23 @@ body {
     font-weight: 500;
     font-size: 20px;
     margin-bottom: 79px;
+}
+
+.assistant__user-message_header{
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #343434;
+}
+
+.assistant__user-message{
+    padding: 0;
+    margin-bottom: 15px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #343434;
 }
 
 .assistant__user-query{

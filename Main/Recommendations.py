@@ -2,7 +2,6 @@ import pymorphy2
 import sqlite3
 from nltk.corpus import stopwords
 
-
 def preprocess(text):
     morph = pymorphy2.MorphAnalyzer()
 
@@ -284,10 +283,11 @@ def category_recommend(tokens, id, cat_id):
         return tokens, id, cat_id
 
 
+
 conn = sqlite3.connect('AssistantDB.db')
 cursor = conn.cursor()
 
-msg = input()
+msg = "Розы"
 tokens = preprocess(msg)
 
 category_id = ['']
@@ -302,6 +302,7 @@ product_id = ''.join(str(x) for x in product_id)
 
 data = [product_id, category_id, msg]
 
+
 # Передача сообщения и данных в БД
 if recommendation != tokens:
     print('Предлагаемые товары', recommendation)
@@ -311,3 +312,4 @@ else:
     print("Для вас не нашлось товара по указанному запросу :(")
 
 conn.close()
+
