@@ -304,12 +304,12 @@ def result_recommendation(msg):
 
     # Передача сообщения и данных в БД
     if recommendation != tokens:
-        print('Предлагаемые товары', recommendation)
+        #print('Предлагаемые товары', recommendation)
         cursor.execute("INSERT INTO assistant_data (product_id, category_id, message) VALUES (?, ?, ?)", data)
         conn.commit()
-        return str(recommendation)
+        return recommendation
     else:
-        print("Для вас не нашлось товара по указанному запросу :(")
-        return "Для вас не нашлось товара по указанному запросу :("
+        #print("Для вас не нашлось товара по указанному запросу :(")
+        return [["Для вас не нашлось товара по указанному запросу :(", "Попробуйте ввести другой запрос"]]
 
     conn.close()

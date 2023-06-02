@@ -17,9 +17,12 @@ def data():
     if request.method == 'GET':
         return f"The URL /data is accessed directly. Try going to '/form' to submit form"
     if request.method == 'POST':
-        form_data = request.form['assistant__user-query']
-        form_data = re.result_recommendation(form_data)
-        return f"{form_data}"
+        user_msg = request.form['assistant__user-query']
+        request_result = re.result_recommendation(user_msg)
+        request_result = {
+            'user_msg' : f'{request_result[0][0]}',
+            'request_result' : f'{request_result[0][1]}'}
+        return render_template('data.html',  form_data=request_result)
 
 nostring = "render_template('data.html',  form_data=form_data) "
 
