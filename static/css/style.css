@@ -160,13 +160,6 @@ body {
     color: #343434;
 }
 
-.assistant__user-message{
-    padding: 0;
-    margin-bottom: 15px;
-    font-family: 'Noto Sans', sans-serif;
-    color: #343434;
-}
-
 
 .assistant__user-query{
     display: flex;
@@ -195,6 +188,38 @@ body {
     font-weight: 700;
     font-size: 16px;
     color: white;
+}
+
+.assistant__recommendation-card{
+    width: 640px;
+    padding: 20px 40px;
+    background: rgb(255,255,255);
+    background: linear-gradient(-25deg, rgba(255,255,255,.32) 0%, rgba(255,255,255,1) 100%);
+    border-radius: 44px;
+    margin-bottom: 40px;
+}
+
+
+.assistant__user-message_title{
+    padding: 0;
+    margin-bottom: 15px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #343434;
+}
+
+.assistant__user-message_description{
+    padding: 0;
+    margin-bottom: 15px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 15px;
+    color: #343434;
+}
+
+.product_img{
+    width: 100px;
+    height: auto;
 }
 
 /*************/
