@@ -24,12 +24,21 @@ def data():
         user_msg = request.form['assistant__user-query']
         request_result = re.result_recommendation(user_msg)
         img_url = request_result[0][3]
+        if request_result[0][2] < 1:
+            return redirect('/notfound/')
         file = os.path.join(img, img_url)
         request_result_title = {
             'title' : f'{request_result[0][0]}'}
         request_result_description = {
             'description' : f'{request_result[0][1]}'}
-        return render_template('data.html',  value1=request_result_title, value2=request_result_description, image=file)
+        request_result_price = {
+            'price': f'Цена: {request_result[0][2]}₽'}
+        return render_template('data.html',  value1=request_result_title, value2=request_result_description, value3=request_result_price, image=file)
+
+@app.route('/notfound/')
+def notfound_page():
+    return render_template('notfound.html')
+
 
 nostring = "render_template('data.html',  form_data=form_data) "
 
